@@ -1,0 +1,22 @@
+<table style="padding: 5px; border-style: solid; ">
+    <tr>
+        <th style="padding: 5px; border-style: solid; ">
+            ID
+        </th>
+        <th style="padding: 5px; border-style: solid; ">
+            Sender
+        </th>
+        <th style="padding: 5px; border-style: solid; ">
+            Receiver
+        </th>
+        <th style="padding: 5px; border-style: solid; ">
+            Total Amount
+        </th>
+    </tr>
+    <tr *ngFor="let parent of parents">
+        <td>{{parent.parentid}}</td>
+        <td>{{parent.sender}}</td>
+        <td>{{parent.receiver}}</td>
+        <td>{{parent.totalamount}}</td>
+    </tr>
+</table>
