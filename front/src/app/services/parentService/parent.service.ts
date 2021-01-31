@@ -11,8 +11,11 @@ export class ParentService {
 
     constructor(private http:HttpClient) {}
 
-    getHeader() : Observable<any>{
-      console.log()
+    getParentTransactions() : Observable<any>{
       return this.http.get(`${baseUrl}parentTransactions`);
+    }
+
+    getParentPaidAmount() : Observable<any> {
+      return this.http.get(`${baseUrl}getParentPaidAmount`);
     }
 }

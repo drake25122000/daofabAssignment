@@ -1,6 +1,6 @@
 <div style="margin: 20px;">
     <div>
-        Parent Table
+        Child Table
     </div>
 
     <table style="padding: 5px; border-style: solid; ">
@@ -18,21 +18,18 @@
                 Total Amount
             </th>
             <th style="padding: 5px; border-style: solid; ">
-                Total Paid Amount
+                Paid Amount
             </th>
         </tr>
-        <tr *ngFor="let parent of displayParents">
-            <td>{{parent.parentid}}</td>
-            <td>{{parent.sender}}</td>
-            <td>{{parent.receiver}}</td>
-            <td>{{parent.totalamount}}</td>
-            <td><a routerLink="/child/{{parent.parentid}}" routerLinkActive="active">{{parent.totalpaidamount}}</a></td>
+        <tr *ngFor="let child of childSenderReceiver">
+            <td>{{child.childid}}</td>
+            <td>{{child.sender}}</td>
+            <td>{{child.receiver}}</td>
+            <td>{{child.totalamount}}</td>
+            <td>{{child.paidamount}}</td>
         </tr>
     </table>
-    <div>
-        <button *ngIf="start > 0" (click)="previous()"><</button>
-        <button *ngIf="start + 2 < parents.length"(click)="next()">></button>
-    </div>
+    <button routerLink="/parent" routerLinkActive="active">
+        Back To Parent
+    </button>
 </div>
-
-

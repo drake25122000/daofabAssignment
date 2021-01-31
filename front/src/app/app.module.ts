@@ -1,16 +1,19 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { ParentComponent } from './models/parent/parent.component';
+import { ChildComponent } from './models/child/child/child.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ParentComponent
+    ParentComponent,
+    ChildComponent,
+    routingComponents
   ],
   imports: [
     BrowserModule,
