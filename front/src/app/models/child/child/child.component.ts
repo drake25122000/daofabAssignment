@@ -9,8 +9,10 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ChildComponent implements OnInit {
 
+  //To initiate the list
   childSenderReceiver :any = [];
 
+  //To initiate the parameter
   param : string = "";
 
   constructor(
